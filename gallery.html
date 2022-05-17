@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        img{
+            width: 100%;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div id="gallerywrapper"></div>
+<script>
+let arrImages = [
+    {filename: "solnedgang_istrien.jpg", title: "solnedgang du"},
+    {filename: "frosne_baade.jpg", title: "frosen båd"},
+    {filename: "istralandia.jpg", title: "isralndia "},
+];
+
+for(let image of arrImages) {
+    let img = document.createElement('img');
+    img.onclick = function name() {
+        img.style.transform = "scale(1.5)";
+        img.style.transition = "transform 0.25s ease";
+    } 
+ 
+    img.src = `/assets/images/${image.filename}`;
+    img.title = image.title;
+    
+    document.getElementById('gallerywrapper').appendChild(img)
+}
+
+
+</script>
+</body>
+</html>
