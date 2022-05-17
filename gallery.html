@@ -15,18 +15,20 @@
     <div id="gallerywrapper"></div>
 <script>
 let arrImages = [
+    // array of thne imagies files
     {filename: "solnedgang_istrien.jpg", title: "solnedgang du"},
     {filename: "frosne_baade.jpg", title: "frosen båd"},
     {filename: "istralandia.jpg", title: "isralndia "},
 ];
 
 for(let image of arrImages) {
+    // cretes a new img element
     let img = document.createElement('img');
+    //cretes a onclick function that scales the img
     img.onclick = function name() {
         img.style.transform = "scale(1.5)";
         img.style.transition = "transform 0.25s ease";
     } 
- 
     img.src = `/assets/images/${image.filename}`;
     img.title = image.title;
     
